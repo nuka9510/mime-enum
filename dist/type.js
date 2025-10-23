@@ -1,0 +1,27 @@
+import { Enum } from "@nuka9510/simple-enum";
+export default class Type extends Enum {
+    static #APPLICATION = new Type('application', 'APPLICATION');
+    static #AUDIO = new Type('audio', 'AUDIO');
+    static #FONT = new Type('font', 'FONT');
+    static #IMAGE = new Type('image', 'IMAGE');
+    static #MESSAGE = new Type('message', 'MESSAGE');
+    static #MODEL = new Type('model', 'MODEL');
+    static #MULTIPART = new Type('multipart', 'MULTIPART');
+    static #TEXT = new Type('text', 'TEXT');
+    static #VIDEO = new Type('video', 'VIDEO');
+    static get APPLICATION() { return Type.#APPLICATION; }
+    static get AUDIO() { return Type.#AUDIO; }
+    static get FONT() { return Type.#FONT; }
+    static get IMAGE() { return Type.#IMAGE; }
+    static get MESSAGE() { return Type.#MESSAGE; }
+    static get MODEL() { return Type.#MODEL; }
+    static get MULTIPART() { return Type.#MULTIPART; }
+    static get TEXT() { return Type.#TEXT; }
+    static get VIDEO() { return Type.#VIDEO; }
+    #name;
+    get name() { return this.#name; }
+    constructor(value, name) {
+        super(value);
+        this.#name = name;
+    }
+}
