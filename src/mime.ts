@@ -1,6 +1,7 @@
 import { Enum } from "@nuka9510/simple-enum";
 import Type from "./type.js";
 
+/** {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Guides/MIME_types/Common_types MIME} 타입 Enum */
 export default class MIME extends Enum<string> {
   static #APPLICATION_ATOM_XML = new MIME('application/atom+xml', 'APPLICATION_ATOM_XML', new Set(['xml']), Type.APPLICATION);
 
@@ -166,168 +167,264 @@ export default class MIME extends Enum<string> {
 
   static #VIDEO_X_MSVIDEO = new MIME('video/x-msvideo', 'VIDEO_X_MSVIDEO', new Set(['avi']), Type.VIDEO);
 
+  /** XML */
   static get APPLICATION_ATOM_XML() { return MIME.#APPLICATION_ATOM_XML; }
 
+  /** 전자출판물(Electronic publication) (EPUB) */
   static get APPLICATION_EPUB_ZIP() { return MIME.#APPLICATION_EPUB_ZIP; }
 
+  /** GZip 압축 아카이브 */
   static get APPLICATION_GZIP() { return MIME.#APPLICATION_GZIP; }
 
+  /** Java Archive (JAR) */
   static get APPLICATION_JAVA_ARCHIVE() { return MIME.#APPLICATION_JAVA_ARCHIVE; }
 
+  /** JSON 형식 */
   static get APPLICATION_JSON() { return MIME.#APPLICATION_JSON; }
 
+  /** JSON-LD 형식 */
   static get APPLICATION_LD_JSON() { return MIME.#APPLICATION_LD_JSON; }
 
+  /** Microsoft 워드 */
   static get APPLICATION_MSWORD() { return MIME.#APPLICATION_MSWORD; }
 
+  /** 모든 종류의 이진 데이터 */
   static get APPLICATION_OCTET_STREAM() { return MIME.#APPLICATION_OCTET_STREAM; }
 
+  /** OGG */
   static get APPLICATION_OGG() { return MIME.#APPLICATION_OGG; }
 
+  /** Adobe {@link https://www.adobe.com/acrobat/about-adobe-pdf.html 휴대용 문서 형식} (PDF) */
   static get APPLICATION_PDF() { return MIME.#APPLICATION_PDF; }
 
+  /** Rich Text Format (RTF) */
   static get APPLICATION_RTF() { return MIME.#APPLICATION_RTF; }
 
+  /** 아마존 킨들 전자책 포맷 */
   static get APPLICATION_VND_AMAZON_EBOOK() { return MIME.#APPLICATION_VND_AMAZON_EBOOK; }
 
+  /** Apple 설치 패키지 */
   static get APPLICATION_VND_APPLE_INSTALLER_XML() { return MIME.#APPLICATION_VND_APPLE_INSTALLER_XML; }
 
+  /** XUL */
   static get APPLICATION_VND_MOZILLA_XUL_XML() { return MIME.#APPLICATION_VND_MOZILLA_XUL_XML; }
 
+  /** Microsoft Excel */
   static get APPLICATION_VND_MS_EXCEL() { return MIME.#APPLICATION_VND_MS_EXCEL; }
 
+  /** MS Embedded OpenType fonts */
   static get APPLICATION_VND_MS_FONTOBJECT() { return MIME.#APPLICATION_VND_MS_FONTOBJECT; }
 
+  /** Microsoft PowerPoint */
   static get APPLICATION_VND_MS_POWERPOINT() { return MIME.#APPLICATION_VND_MS_POWERPOINT; }
 
+  /** OpenDocument 프레젠테이션 문서 */
   static get APPLICATION_VND_OASIS_OPENDOCUMENT_PRESENTATION() { return MIME.#APPLICATION_VND_OASIS_OPENDOCUMENT_PRESENTATION; }
 
+  /** OpenDocument 스프레드시트 문서 */
   static get APPLICATION_VND_OASIS_OPENDOCUMENT_SPREADSHEET() { return MIME.#APPLICATION_VND_OASIS_OPENDOCUMENT_SPREADSHEET; }
 
+  /** OpenDocument 텍스트 문서 */
   static get APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT() { return MIME.#APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT; }
 
+  /** Microsoft PowerPoint (OpenXML) */
   static get APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRESENTATION() { return MIME.#APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRESENTATION; }
 
+  /** Microsoft Excel (OpenXML) */
   static get APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET() { return MIME.#APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET; }
 
+  /** Microsoft 워드 (OpenXML) */
   static get APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT() { return MIME.#APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT; }
 
+  /** RAR 아카이브 */
   static get APPLICATION_VND_RAR() { return MIME.#APPLICATION_VND_RAR; }
 
+  /** Microsoft Visio */
   static get APPLICATION_VND_VISIO() { return MIME.#APPLICATION_VND_VISIO; }
 
+  /** {@link https://en.wikipedia.org/wiki/7-Zip 7-zip} archive */
   static get APPLICATION_X_7Z_COMPRESSED() { return MIME.#APPLICATION_X_7Z_COMPRESSED; }
 
+  /** {@link https://en.wikipedia.org/wiki/AbiWord AbiWord} 문서 */
   static get APPLICATION_X_ABIWORD() { return MIME.#APPLICATION_X_ABIWORD; }
 
+  /** BZip 아카이브 */
   static get APPLICATION_X_BZIP() { return MIME.#APPLICATION_X_BZIP; }
 
+  /** BZip2 아카이브 */
   static get APPLICATION_X_BZIP2() { return MIME.#APPLICATION_X_BZIP2; }
 
+  /** CD 오디오 */
   static get APPLICATION_X_CDF() { return MIME.#APPLICATION_X_CDF; }
 
+  /** C-셸 스크립트 */
   static get APPLICATION_X_CSH() { return MIME.#APPLICATION_X_CSH; }
 
+  /** 아카이브 문서 (다중 파일 포함) */
   static get APPLICATION_X_FREEARC() { return MIME.#APPLICATION_X_FREEARC; }
 
+  /** Hypertext Preprocessor (Personal Home Page) */
   static get APPLICATION_X_HTTPD_PHP() { return MIME.#APPLICATION_X_HTTPD_PHP; }
 
+  /** Bourne shell script */
   static get APPLICATION_X_SH() { return MIME.#APPLICATION_X_SH; }
 
+  /** Tape Archive (TAR) */
   static get APPLICATION_X_TAR() { return MIME.#APPLICATION_X_TAR; }
 
+  /** XHTML */
   static get APPLICATION_XHTML_XML() { return MIME.#APPLICATION_XHTML_XML; }
 
+  /** XML */
   static get APPLICATION_XML() { return MIME.#APPLICATION_XML; }
 
+  /** ZIP archive */
   static get APPLICATION_ZIP() { return MIME.#APPLICATION_ZIP; }
 
+  /** {@link https://en.wikipedia.org/wiki/3GP_and_3G2 3GPP} audio container */
   static get AUDIO_3GPP() { return MIME.#AUDIO_3GPP; }
 
+  /** {@link https://en.wikipedia.org/wiki/3GP_and_3G2 3GPP2} audio container */
   static get AUDIO_3GPP2() { return MIME.#AUDIO_3GPP2; }
 
+  /** AAC 오디오 */
   static get AUDIO_AAC() { return MIME.#AUDIO_AAC; }
 
+  /** Musical Instrument Digital Interface (MIDI) */
   static get AUDIO_MIDI() { return MIME.#AUDIO_MIDI; }
 
+  /** MP3 오디오 */
   static get AUDIO_MPEG() { return MIME.#AUDIO_MPEG; }
 
+  /** OGG 오디오 */
   static get AUDIO_OGG() { return MIME.#AUDIO_OGG; }
 
+  /** Opus 오디오 */
   static get AUDIO_OPUS() { return MIME.#AUDIO_OPUS; }
 
+  /** Waveform Audio Format */
   static get AUDIO_WAV() { return MIME.#AUDIO_WAV; }
 
+  /** Waveform Audio Format */
   static get AUDIO_WAVE() { return MIME.#AUDIO_WAVE; }
 
+  /** WEBM audio */
   static get AUDIO_WEBM() { return MIME.#AUDIO_WEBM; }
 
+  /** Musical Instrument Digital Interface (MIDI) */
   static get AUDIO_X_MIDI() { return MIME.#AUDIO_X_MIDI; }
 
+  /** Waveform Audio Format */
   static get AUDIO_X_PN_WAV() { return MIME.#AUDIO_X_PN_WAV; }
 
+  /** Waveform Audio Format */
   static get AUDIO_X_WAV() { return MIME.#AUDIO_X_WAV; }
 
+  /** OpenType 폰트 */
   static get FONT_OTF() { return MIME.#FONT_OTF; }
 
+  /** TrueType Font */
   static get FONT_TTF() { return MIME.#FONT_TTF; }
 
+  /** Web Open Font Format (WOFF) */
   static get FONT_WOFF() { return MIME.#FONT_WOFF; }
 
+  /** Web Open Font Format (WOFF) */
   static get FONT_WOFF2() { return MIME.#FONT_WOFF2; }
 
+  /** Animated Portable Network Graphics (APNG) */
   static get IMAGE_APNG() { return MIME.#IMAGE_APNG; }
 
+  /** AVIF 이미지 */
   static get IMAGE_AVIF() { return MIME.#IMAGE_AVIF; }
 
+  /** Windows OS/2 비트맵 그래픽 */
   static get IMAGE_BMP() { return MIME.#IMAGE_BMP; }
 
+  /** Graphics Interchange Format (GIF) */
   static get IMAGE_GIF() { return MIME.#IMAGE_GIF; }
 
+  /** JPEG 이미지 */
   static get IMAGE_JPEG() { return MIME.#IMAGE_JPEG; }
 
+  /** Portable Network Graphics */
   static get IMAGE_PNG() { return MIME.#IMAGE_PNG; }
 
+  /** Scalable Vector Graphics (SVG) */
   static get IMAGE_SVG_XML() { return MIME.#IMAGE_SVG_XML; }
 
+  /** Tagged Image File Format (TIFF) */
   static get IMAGE_TIFF() { return MIME.#IMAGE_TIFF; }
 
+  /** Icon format */
   static get IMAGE_VND_MICROSOFT_ICON() { return MIME.#IMAGE_VND_MICROSOFT_ICON; }
 
+  /** WEBP image */
   static get IMAGE_WEBP() { return MIME.#IMAGE_WEBP; }
 
+  /**
+   * `multipart/byteranges` MIME 타입은 브라우저에 부분적 응답을 보내는 데 사용됩니다.  \
+   *   \
+   * {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Status/206 206 Partial Content} 상태 코드가 전송된 경우, MIME 타입은 문서가 각각의 요청된 범위들 중 하나인 몇 가지 파트들로 구성되어 있음을 알려주기 위해 사용됩니다.  \
+   * 다른 다중부분 타입처럼, {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Headers/Content-Type Content-Type}은 이 조각들을 분리하기 위해 `boundary` 디렉티브를 사용합니다.  \
+   * 각각의 다른 파트들은 문서의 실제 타입을 가진 {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Headers/Content-Type Content-Type} 헤더와 그들이 나타내는 범위를 가진 {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Headers/Content-Range Content-Range}를 지니고 있습니다.
+   */
   static get MULTIPART_BYTERANGES() { return MIME.#MULTIPART_BYTERANGES; }
 
+  /**
+   * `multipart/form-data`은 브라우저에서 서버로 완성된 {@link https://developer.mozilla.org/ko/docs/Learn_web_development/Extensions/Forms HTML Form}의 내용을 전송 시 사용할 수 있습니다.  \
+   *   \
+   * 다중부분 문서 형식으로써, 경계(이중 대시 `'--'` 로 시작되는 문자열)로 구분되어지는 다른 파트들로 구성됩니다.  \
+   * 각 파트는 그 자체로 개체이며 자신만의 HTTP 헤더를 가지는데, 파일 업로드 필드를 위한 헤더로는 {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Headers/Content-Disposition Content-Disposition}, {@link https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Headers/Content-Type Content-Type}이 있습니다.
+   */
   static get MULTIPART_FORM_DATA() { return MIME.#MULTIPART_FORM_DATA; }
 
+  /** iCalendar format */
   static get TEXT_CALENDAR() { return MIME.#TEXT_CALENDAR; }
 
+  /** 종속 스타일 시트 (CSS) */
   static get TEXT_CSS() { return MIME.#TEXT_CSS; }
 
+  /** 쉼표로 구분된 값 (CSV) */
   static get TEXT_CSV() { return MIME.#TEXT_CSV; }
 
+  /** HyperText Markup Language (HTML) */
   static get TEXT_HTML() { return MIME.#TEXT_HTML; }
 
+  /**
+   * JavaScript  \
+   * JavaScript 모듈
+   */
   static get TEXT_JAVASCRIPT() { return MIME.#TEXT_JAVASCRIPT; }
 
+  /** Text, (일반적으로 {@link https://developer.mozilla.org/ko/docs/Glossary/ASCII ASCII} 또는 ISO 8859-n) */
   static get TEXT_PLAIN() { return MIME.#TEXT_PLAIN; }
 
+  /** XML */
   static get TEXT_XML() { return MIME.#TEXT_XML; }
 
+  /** {@link https://en.wikipedia.org/wiki/3GP_and_3G2 3GPP} video container */
   static get VIDEO_3GPP() { return MIME.#VIDEO_3GPP; }
 
+  /** {@link https://en.wikipedia.org/wiki/3GP_and_3G2 3GPP2} video container */
   static get VIDEO_3GPP2() { return MIME.#VIDEO_3GPP2; }
 
+  /** MPEG 전송 스트림 */
   static get VIDEO_MP2T() { return MIME.#VIDEO_MP2T; }
 
+  /** MP4 비디오 */
   static get VIDEO_MP4() { return MIME.#VIDEO_MP4; }
 
+  /** MPEG 비디오 */
   static get VIDEO_MPEG() { return MIME.#VIDEO_MPEG; }
 
+  /** OGG 비디오 */
   static get VIDEO_OGG() { return MIME.#VIDEO_OGG; }
 
+  /** WEBM video */
   static get VIDEO_WEBM() { return MIME.#VIDEO_WEBM; }
 
+  /** AVI: 오디오 비디오 인터리브(Audio Video Interleave) */
   static get VIDEO_X_MSVIDEO() { return MIME.#VIDEO_X_MSVIDEO; }
 
   #name: string;
@@ -349,7 +446,7 @@ export default class MIME extends Enum<string> {
     type: Type
   ) {
     super(value);
-    
+
     this.#name = name;
     this.#ext = ext
     this.#type = type;
