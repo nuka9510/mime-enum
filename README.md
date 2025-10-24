@@ -86,8 +86,6 @@ httpStatusEnum.HttpStatus;
 ### example
 ```
 example
-├── data
-│  └── case_1.json
 ├── js
 │  └── case_1.mjs
 └── view
