@@ -1,6 +1,6 @@
 {
   "name": "@nuka9510/mime-enum",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mime enum",
   "type": "module",
   "exports": {
