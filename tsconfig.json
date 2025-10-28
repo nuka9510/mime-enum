@@ -10,7 +10,11 @@
     "target": "ESNext",
     "declaration": true,
     "declarationDir": "dist",
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@nuka9510/mime-enum": ["src/index.ts"]
+    }
   },
   "include": [
     "src/index.ts"
