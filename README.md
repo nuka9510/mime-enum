@@ -33,122 +33,65 @@
 [top-language]: https://img.shields.io/github/languages/top/nuka9510/mime-enum
 
 ## Install
-```
+
+```shell
 npm i @nuka9510/mime-enum
 ```
-```
+
+```html
 <script src="https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum/dist/js/index.min.js"> </script>
 ```
-```
+
+```html
 <script src="https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum@latest/dist/js/index.min.js"> </script>
 ```
-```
+
+```html
 <script src="https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum@<specific-version>/dist/js/index.min.js"> </script>
 ```
-```
+
+```html
 <script type="importmap">
   {
     "imports": { "@nuka9510/mime-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum/dist/esm/index.min.mjs" }
   }
 </script>
 ```
-```
+
+```html
 <script type="importmap">
   {
     "imports": { "@nuka9510/mime-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum@latest/dist/esm/index.min.mjs" }
   }
 </script>
 ```
-```
+
+```html
 <script type="importmap">
   {
     "imports": { "@nuka9510/mime-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum@<specific-version>/dist/esm/index.min.mjs" }
   }
 </script>
 ```
+
 ## Usage
+
 ### js
-```
+
+```js
 httpStatusEnum.HttpStatus;
 ```
-### mjs
-```
-import { HttpStatus } from "@nuka9510/mime-enum";
 
-HttpStatus;
+### mjs
+
+```js
+import { HttpStatus } from "@nuka9510/mime-enum";
 ```
+
 ### cjs
-```
+
+```js
 const httpStatusEnum = require('@nuka9510/mime-enum');
 
 httpStatusEnum.HttpStatus;
 ```
-### example
-```
-example
-├── js
-│  └── case_1.mjs
-└── view
-   └── case_1.html
-```
-- `js/case_1.mjs`
-```
-import { MIME, Type } from "@nuka9510/mime-enum";
-
-class Case1 {
-  constructor() {
-    this.onFileChange = this.onFileChange.bind(this);
-
-    document.querySelectorAll('[data-action="file-change"]')
-            .forEach((...arg) => { arg[0].addEventListener('change', this.onFileChange); });
-  }
-
-  onFileChange(
-    /** @type {Event} */ ev
-  ) {
-    /** @type {HTMLInputElement} */
-    const target = ev.currentTarget,
-    /** @type {HTMLParagraphElement} */
-    fileListEl = document.querySelector('[data-name="file-list"]'),
-    dt = new DataTransfer();
-
-    [...target.files].forEach((...arg) => {
-      /** @type {MIME} */
-      const mime = MIME.valueOf(arg[0].type);
-
-      if (mime.type != Type.IMAGE) { return; }
-
-      dt.items.add(arg[0]);
-    });
-
-    if (target.files.length != dt.files.length) { alert('이미지 파일만 첨부 가능합니다.'); }
-
-    target.files = dt.files;
-
-    fileListEl.innerHTML = [...dt.files].map((...arg) => arg[0].name)
-                                        .join('<br/>');
-  }
-}
-
-new Case1();
-```
-- `view/case_1.html`
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <input type="file" data-action="file-change" multiple>
-  <p data-name="file-list"></p>
-</body>
-<script type="importmap">
-  {
-    "imports": { "@nuka9510/mime-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/mime-enum/dist/esm/index.min.mjs" }
-  }
-</script>
-<script src="../js/case_1.mjs" type="module"></script>
-</html>
